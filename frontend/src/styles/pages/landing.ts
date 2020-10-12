@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import backgroundImage from '../../assets/images/landing.svg'
+import backgroundImage from '../../assets/images/landing.svg';
 
 export const PageLandingContainer = styled.div`
   width: 100vw;
@@ -45,7 +45,7 @@ export const Title = styled.h1`
 export const Description = styled.p`
   margin-top: 40px;
   font-size: 24px;
-  line-height: 34px
+  line-height: 34px;
 `;
 
 export const Location = styled.div`

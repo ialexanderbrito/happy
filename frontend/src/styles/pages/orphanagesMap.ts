@@ -9,6 +9,10 @@ export const PageMapContainer  = styled.div`
 
   position: relative;
   display: flex;
+
+  .leaflet-container {
+    z-index: 5;
+  }
 `;
 
 export const Aside = styled.aside`
@@ -57,6 +61,8 @@ export const CreateOrphanage = styled(Link)`
   position: absolute;
   right: 40px;
   bottom: 40px;
+
+  z-index: 10;
 
   width: 64px;
   height: 64px;
