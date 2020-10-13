@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('orphanages')
