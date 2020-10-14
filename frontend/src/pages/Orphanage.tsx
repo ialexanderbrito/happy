@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import { FiClock, FiInfo } from 'react-icons/fi';
+import { FiClock, FiInfo, FiLoader } from 'react-icons/fi';
 import { Map, Marker, TileLayer } from 'react-leaflet';
 import { useParams } from 'react-router-dom';
 
@@ -41,7 +41,12 @@ export default function Orphanage() {
   }, [params.id]);
 
   if (!orphanage) {
-    return <p>Loading ...</p>;
+    return (
+      <div id="overlay">
+        <FiLoader size={64} color="#12afcb" />
+        <h1>Carregando...</h1>
+      </div>
+    );
   }
 
   return (
@@ -88,7 +93,7 @@ export default function Orphanage() {
                 doubleClickZoom={false}
               >
                 <TileLayer
-                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                  url={`https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                 />
                 <Marker
                   interactive={false}
