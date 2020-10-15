@@ -31,6 +31,7 @@ export const CalloutContainer = styled.View`
 export const CalloutText = styled.Text`
   color: ${({ theme }) => theme.textColor};
   font-size: 14px;
+  font-family: 'Nunito_700Bold';
 `;
 
 export const Footer = styled.View`
@@ -53,6 +54,7 @@ export const Footer = styled.View`
 
 export const FooterText = styled.Text`
   color: ${({ theme }) => theme.textSecondary};
+  font-family: 'Nunito_700Bold';
 `;
 
 export const CreateOrphanageButton = styled.TouchableOpacity`
