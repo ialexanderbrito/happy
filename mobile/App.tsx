@@ -1,14 +1,31 @@
 import React from 'react';
+import { useFonts } from 'expo-font';
+import { AppLoading } from 'expo';
+import {
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_800ExtraBold,
+} from '@expo-google-fonts/nunito';
 import { AppearanceProvider } from 'react-native-appearance';
 
 import MainApplication from './src';
 
 const App: React.FC = () => {
-    return (
-      <AppearanceProvider>
-        <MainApplication />
-      </AppearanceProvider>
-    );
-}
+  const [fontsLoaded] = useFonts({
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_800ExtraBold,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
+  return (
+    <AppearanceProvider>
+      <MainApplication />
+    </AppearanceProvider>
+  );
+};
 
 export default App;
