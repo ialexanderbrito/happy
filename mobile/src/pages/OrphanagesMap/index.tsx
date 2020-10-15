@@ -2,6 +2,9 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { PROVIDER_GOOGLE, Marker, Callout } from 'react-native-maps';
 import { Feather } from '@expo/vector-icons';
+import { useTheme } from 'styled-components';
+
+import darkMap from '../../themes/darkMap.json';
 
 import mapMarker from '../../assets/images/map-marker.png';
 
@@ -16,6 +19,7 @@ import {
 } from './styles';
 
 const OrphanagesMap: React.FC = () => {
+  const theme = useTheme();
   const navigation = useNavigation();
 
   function handleNavigateToOrphanageDetail() {
@@ -24,6 +28,7 @@ const OrphanagesMap: React.FC = () => {
   return (
     <Wrapper>
       <Map
+        customMapStyle={theme.isLighten ? [] : darkMap}
         provider={PROVIDER_GOOGLE}
         initialRegion={{
           latitude: -22.767972,

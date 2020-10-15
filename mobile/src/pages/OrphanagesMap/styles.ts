@@ -23,7 +23,7 @@ export const CalloutContainer = styled.View`
   width: 160px;
   height: 46px;
   padding-horizontal: 16px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: ${({ theme }) => theme.overlay};
   border-radius: 16px;
   justify-content: center;
 `;

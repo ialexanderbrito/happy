@@ -8,5 +8,6 @@ declare module 'styled-components' {
     primaryDarken: string;
     textColor: string;
     textSecondary: string;
+    overlay: string;
   }
 }
