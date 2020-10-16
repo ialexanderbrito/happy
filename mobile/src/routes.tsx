@@ -12,6 +12,9 @@ import InitialOnboarding from './pages/InitialOnboarding';
 import OrphanagesMap from './pages/OrphanagesMap';
 import OrphanageDetail from './pages/OrphanageDetail';
 
+import SelectMapPosition from './pages/SelectMapPosition';
+import OrphanageData from './pages/OrphanageData';
+
 const AppStack = createStackNavigator();
 
 const Routes: React.FC = () => {
@@ -37,6 +40,11 @@ const Routes: React.FC = () => {
         />
         <AppStack.Screen name="OrphanagesMap" component={OrphanagesMap} />
         <AppStack.Screen name="OrphanageDetail" component={OrphanageDetail} />
+        <AppStack.Screen
+          name="SelectMapPosition"
+          component={SelectMapPosition}
+        />
+        <AppStack.Screen name="OrphanageData" component={OrphanageData} />
       </AppStack.Navigator>
     </NavigationContainer>
   );
