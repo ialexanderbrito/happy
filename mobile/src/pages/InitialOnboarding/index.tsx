@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Feather } from '@expo/vector-icons';
+import { RectButton } from 'react-native-gesture-handler';
 import Onboarding from 'react-native-onboarding-swiper';
 import { View, TouchableOpacity, Image } from 'react-native';
 
@@ -8,7 +9,7 @@ import earth from '../../assets/images/earth.png';
 import kids from '../../assets/images/kids.png';
 
 const Next = ({ ...props }) => (
-  <TouchableOpacity
+  <RectButton
     {...props}
     style={{
       width: 56,
@@ -21,7 +22,7 @@ const Next = ({ ...props }) => (
     }}
   >
     <Feather name="arrow-right" size={24} color="#E3A800" />
-  </TouchableOpacity>
+  </RectButton>
 );
 
 const Square = ({ isLight, selected }) => {
