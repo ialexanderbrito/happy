@@ -9,5 +9,7 @@ declare module 'styled-components' {
     textColor: string;
     textSecondary: string;
     overlay: string;
+    headerColor: string;
+    headerBorder: string;
   }
 }
