@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -15,6 +15,8 @@ import OrphanageDetail from './pages/OrphanageDetail';
 import SelectMapPosition from './pages/SelectMapPosition';
 import OrphanageData from './pages/OrphanageData';
 
+import Header from './components/Header';
+
 const AppStack = createStackNavigator();
 
 const Routes: React.FC = () => {
@@ -23,12 +25,14 @@ const Routes: React.FC = () => {
   return (
     <NavigationContainer>
       <StatusBar
-        backgroundColor={theme.primary}
+        backgroundColor="transparent"
         barStyle={theme.isLighten ? 'dark-content' : 'light-content'}
+        translucent
       />
       <AppStack.Navigator
         screenOptions={{
           headerShown: false,
+          cardStyle: { backgroundColor: '#f2f3f5' },
           gestureEnabled: true,
           gestureDirection: 'horizontal',
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
@@ -39,12 +43,30 @@ const Routes: React.FC = () => {
           component={InitialOnboarding}
         />
         <AppStack.Screen name="OrphanagesMap" component={OrphanagesMap} />
-        <AppStack.Screen name="OrphanageDetail" component={OrphanageDetail} />
+        <AppStack.Screen
+          name="OrphanageDetail"
+          component={OrphanageDetail}
+          options={{
+            headerShown: true,
+            header: () => <Header showCancel={false} title="Orfanato" />,
+          }}
+        />
         <AppStack.Screen
           name="SelectMapPosition"
           component={SelectMapPosition}
+          options={{
+            headerShown: true,
+            header: () => <Header title="Selecione no mapa" />,
+          }}
         />
-        <AppStack.Screen name="OrphanageData" component={OrphanageData} />
+        <AppStack.Screen
+          name="OrphanageData"
+          component={OrphanageData}
+          options={{
+            headerShown: true,
+            header: () => <Header title="Informe os dados" />,
+          }}
+        />
       </AppStack.Navigator>
     </NavigationContainer>
   );
