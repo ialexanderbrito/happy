@@ -20,10 +20,10 @@ import {
 
 const OrphanagesMap: React.FC = () => {
   const theme = useTheme();
-  const navigation = useNavigation();
+  const { navigate } = useNavigation();
 
   function handleNavigateToOrphanageDetail() {
-    navigation.navigate('OrphanageDetail');
+    navigate('OrphanageDetail');
   }
   return (
     <Wrapper>
