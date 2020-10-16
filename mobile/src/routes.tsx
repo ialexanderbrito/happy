@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -8,6 +8,7 @@ import {
 
 import { useTheme } from 'styled-components';
 
+import InitialOnboarding from './pages/InitialOnboarding';
 import OrphanagesMap from './pages/OrphanagesMap';
 import OrphanageDetail from './pages/OrphanageDetail';
 
@@ -30,6 +31,10 @@ const Routes: React.FC = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       >
+        <AppStack.Screen
+          name="InitialOnboarding"
+          component={InitialOnboarding}
+        />
         <AppStack.Screen name="OrphanagesMap" component={OrphanagesMap} />
         <AppStack.Screen name="OrphanageDetail" component={OrphanageDetail} />
       </AppStack.Navigator>
