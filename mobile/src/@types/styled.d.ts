@@ -5,8 +5,10 @@ declare module 'styled-components' {
     isLighten?: boolean;
     primary: string;
     secondary: string;
+    tertiary: string;
     primaryDarken: string;
     textColor: string;
+    textDescription: string;
     textSecondary: string;
     overlay: string;
     headerColor: string;
