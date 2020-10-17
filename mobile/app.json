@@ -15,10 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "com.ialexanderbrito.happy",
       "buildNumber": "1.0.0"
@@ -33,5 +30,6 @@
     },
     "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
     "githubUrl": "https://github.com/ialexanderbrito/happy"
+    }
   }
 }
