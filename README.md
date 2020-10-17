@@ -34,7 +34,7 @@ Extras:
   - [React Router DOM](https://reactrouter.com/)
   - [Express](https://expressjs.com/pt-br/)
   - [Multer](https://github.com/expressjs/multer#readme)
-  - Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>
+  - Para mais detalhes, veja o <kbd>[package.json](https://github.com/ialexanderbrito/happy/blob/master/mobile/package.json)</kbd>
 
 - Estilos
   - [EditorConfig](https://editorconfig.org/)
@@ -82,11 +82,10 @@ $ cd backend
 $ npm install ou yarn
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm start ou yarn start
+$ npm run dev ou yarn dev
 
-# Se quiser criei uma nova database (opcional)
-# Antes remova database da pasta: src/database/database.sqlite e execute:
-$ npm knex:migrate ou yarn knex:migrate
+# Antes crie a database da pasta: src/database/database.sqlite e execute:
+$ npm typeorm migration:run ou yarn typeorm migration:run
 
 # O servidor inciará na porta:3333 - acesse http://localhost:3333 
 ```
@@ -112,7 +111,7 @@ $ npm start ou yarn start
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
-<!-- ### 🧭 Rodando o Mobile
+### 🧭 Rodando o Mobile
 
 ```bash
 # Clone este repositório
@@ -131,7 +130,7 @@ $ npm install ou yarn
 $ expo start ou yarn start
 
 # A aplicação será aberta no navegador basta acessar via QR Code pelo celular
-``` -->
+```
 
 
 ### :recycle: Como contribuir
