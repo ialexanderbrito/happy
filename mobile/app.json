@@ -1,14 +1,16 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Happy",
+    "slug": "happy",
+    "privacy": "public",
+    "sdkVersion": "39.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#03C5C7"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,11 +20,18 @@
     ],
     "userInterfaceStyle": "automatic",
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.ialexanderbrito.happy",
+      "buildNumber": "1.0.0"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD34gxremar_jo9kDbMR093xOyrchy9NoM"
+        },
+      "package": "com.ialexanderbrito.happy",
+      "versionCode": 1
     },
-    "android": {}
+    "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
+    "githubUrl": "https://github.com/ialexanderbrito/happy"
   }
 }
