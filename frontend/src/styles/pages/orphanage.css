@@ -153,6 +153,26 @@
   color: #ff669d;
 }
 
+.orphanage-details .orphanage-details-content div.whatsapp a {
+  margin-top: 64px;
+
+  width: 100%;
+  height: 64px;
+  border: 0;
+  cursor: pointer;
+  background: #3cdc8c;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+
 .orphanage-details .orphanage-details-content button.contact-button {
   margin-top: 64px;
 
