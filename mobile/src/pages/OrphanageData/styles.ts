@@ -6,7 +6,7 @@ export const Container = styled.ScrollView`
 `;
 
 export const Title = styled.Text`
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.title};
   font-size: 24px;
   font-family: 'Nunito_700Bold';
   margin-bottom: 32px;
@@ -16,7 +16,7 @@ export const Title = styled.Text`
 `;
 
 export const Label = styled.Text`
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.text};
   font-family: 'Nunito_600SemiBold';
   margin-bottom: 8px;
 `;
@@ -27,10 +27,10 @@ export const Comment = styled.Text`
 `;
 
 export const Input = styled.TextInput`
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.inputBackground};
+  color: ${({ theme }) => theme.text};
   border-width: 1.4px;
-  border-color: ${({ theme }) => theme.headerBorder};
+  border-color: ${({ theme }) => theme.borderColor};
   border-radius: 20px;
   height: 56px;
   padding: 18px 24px;
@@ -71,7 +71,7 @@ export const SwitchContainer = styled.View`
 export const SwitchChange = styled.Switch``;
 
 export const NextButton = styled(RectButton)`
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primaryLight};
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -82,5 +82,5 @@ export const NextButton = styled(RectButton)`
 export const NextButtonText = styled.Text`
   font-family: 'Nunito_800ExtraBold';
   font-size: 16px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.gradientText};
 `;

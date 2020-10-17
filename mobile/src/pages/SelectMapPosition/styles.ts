@@ -14,7 +14,7 @@ export const Map = styled(MapView)`
 `;
 
 export const NextButton = styled(RectButton)`
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primaryLight}
   border-radius: 20px;
   justify-content: center;
   align-items: center;

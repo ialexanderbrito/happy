@@ -32,7 +32,7 @@ const Routes: React.FC = () => {
       <AppStack.Navigator
         screenOptions={{
           headerShown: false,
-          cardStyle: { backgroundColor: theme.primary },
+          cardStyle: { backgroundColor: theme.background },
           gestureEnabled: true,
           gestureDirection: 'horizontal',
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,

@@ -23,7 +23,7 @@ export const DetailsContainer = styled.View`
 `;
 
 export const Title = styled.Text`
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.title};
   font-size: 30px;
   font-family: 'Nunito_700Bold';
 `;
@@ -32,14 +32,14 @@ export const Description = styled.Text`
   font-family: 'Nunito_600SemiBold';
   line-height: 24px;
   margin-top: 16px;
-  color: ${({ theme }) => theme.textDescription};
+  color: ${({ theme }) => theme.text};
 `;
 
 export const MapContainer = styled.View`
   border-radius: 20px;
   overflow: hidden;
   border-width: 1.2px;
-  border-color: ${({ theme }) => theme.headerBorder};
+  border-color: ${({ theme }) => theme.borderColor};
   margin-top: 40px;
   background-color: #e6f7fb;
 `;
@@ -63,7 +63,7 @@ export const RoutesText = styled.Text`
 export const Separator = styled.View`
   height: 0.8px;
   width: 100%;
-  background-color: ${({ theme }) => theme.headerColor};
+  background-color: ${({ theme }) => theme.borderColor};
   margin: 40px 0px;
 `;
 

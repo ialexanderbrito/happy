@@ -4,14 +4,20 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     isLighten?: boolean;
     primary: string;
+    primaryLight: string;
+    primaryDark: string;
     secondary: string;
     tertiary: string;
-    primaryDarken: string;
-    textColor: string;
-    textDescription: string;
-    textSecondary: string;
-    overlay: string;
+    tertiaryLight: string;
+    tertiaryDark: string;
+    gradientText: string;
+    title: string;
+    text: string;
+    background: string;
+    formBackground: string;
+    inputBackground: string;
+    borderColor: string;
     headerColor: string;
-    headerBorder: string;
+    overlay: string;
   }
 }

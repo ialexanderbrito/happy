@@ -5,7 +5,7 @@ export const Container = styled.View`
   padding: 24px;
   background-color: ${({ theme }) => theme.headerColor};
   border-bottom-width: 1px;
-  border-color: ${({ theme }) => theme.headerBorder};
+  border-color: ${({ theme }) => theme.borderColor};
   padding-top: 44px;
 
   flex-direction: row;
@@ -15,7 +15,7 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-family: 'Nunito_600SemiBold';
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.text};
   font-size: 16px;
 `;
 

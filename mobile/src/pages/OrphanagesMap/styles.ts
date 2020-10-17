@@ -5,14 +5,9 @@ import MapView from 'react-native-maps';
 
 export const Wrapper = styled.View`
   flex: 1;
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.background};
   align-items: center;
   justify-content: center;
-`;
-
-export const Title = styled.Text`
-  color: ${({ theme }) => theme.textColor};
-  font-size: 32px;
 `;
 
 export const Map = styled(MapView)`
@@ -30,7 +25,7 @@ export const CalloutContainer = styled.View`
 `;
 
 export const CalloutText = styled.Text`
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.primaryLight};
   font-size: 14px;
   font-family: 'Nunito_700Bold';
 `;
@@ -41,7 +36,7 @@ export const Footer = styled.View`
   right: 24px;
   bottom: 32px;
 
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${({ theme }) => theme.formBackground};
   border-radius: 20px;
   height: 56px;
   padding-left: 24px;
@@ -54,14 +49,14 @@ export const Footer = styled.View`
 `;
 
 export const FooterText = styled.Text`
-  color: ${({ theme }) => theme.textSecondary};
+  color: ${({ theme }) => theme.text};
   font-family: 'Nunito_700Bold';
 `;
 
 export const CreateOrphanageButton = styled(RectButton)`
   width: 56px;
   height: 56px;
-  background-color: ${({ theme }) => theme.secondary};
+  background-color: ${({ theme }) => theme.primaryLight};
   border-radius: 20px;
 
   justify-content: center;

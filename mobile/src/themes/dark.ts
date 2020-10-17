@@ -1,16 +1,22 @@
 import { DefaultTheme } from 'styled-components';
 
 const darkTheme: DefaultTheme = {
-  primary: '#000000',
-  secondary: '#15c3d6',
-  tertiary: '#5843e8',
-  primaryDarken: '#242423',
-  textColor: '#0089a5',
-  textSecondary: '#8fa7b3',
-  textDescription: '#5c8599',
-  overlay: 'rgba(0, 0, 0, 0.8)',
+  primary: '#000',
+  primaryLight: '#15C3D6',
+  primaryDark: '#2491a6',
+  secondary: '#0089A5',
+  tertiary: '#3CDC8C',
+  tertiaryLight: '#37C77F',
+  tertiaryDark: '#4CAF50 ',
+  gradientText: '#ffffff',
+  title: '#4D6F80',
+  text: '#5C8599',
+  background: '#212121',
+  formBackground: '#151515',
+  inputBackground: '#101010',
+  borderColor: '#222222',
   headerColor: '#212121',
-  headerBorder: '#757575',
+  overlay: 'rgba(0, 0, 0, 0.8)',
 };
 
 export default darkTheme;
