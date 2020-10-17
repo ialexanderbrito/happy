@@ -47,6 +47,7 @@ interface Orphanage {
   about: string;
   instructions: string;
   opening_hours: string;
+  whatsapp: string;
   open_on_weekends: boolean;
   images: Array<{
     id: number;
@@ -78,8 +79,12 @@ const OrphanageDetail: React.FC = () => {
     );
   }
 
+  function handleOpenWhatsApp() {
+    Linking.openURL(`whatsapp://send?phone=55${orphanage.whatsapp}`);
+  }
+
   return (
-    <Container>
+    <Container showsVerticalScrollIndicator={false}>
       <ImagesContainer>
         <PagingEnabled horizontal pagingEnabled>
           {orphanage.images.map((image) => {
@@ -153,7 +158,7 @@ const OrphanageDetail: React.FC = () => {
           )}
         </ScheduleContainer>
 
-        <ContactButton onPress={() => {}}>
+        <ContactButton onPress={handleOpenWhatsApp}>
           <FontAwesome name="whatsapp" size={24} color="#FFF" />
           <ContactButtonText>Entrar em contato</ContactButtonText>
         </ContactButton>

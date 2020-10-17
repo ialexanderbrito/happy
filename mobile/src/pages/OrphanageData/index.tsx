@@ -31,6 +31,7 @@ const OrphanageData: React.FC = () => {
   const [about, setAbout] = useState('');
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpeningHours] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
   const [images, setImages] = useState<string[]>([]);
 
@@ -49,6 +50,7 @@ const OrphanageData: React.FC = () => {
     data.append('longitude', String(longitude));
     data.append('instructions', instructions);
     data.append('opening_hours', opening_hours);
+    data.append('whatsapp', whatsapp);
     data.append('open_on_weekends', String(open_on_weekends));
 
     images.forEach((image, index) => {
@@ -87,7 +89,10 @@ const OrphanageData: React.FC = () => {
   }
 
   return (
-    <Container contentContainerStyle={{ padding: 24 }}>
+    <Container
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ padding: 24 }}
+    >
       <Title>Dados</Title>
 
       <Label>Nome</Label>
@@ -102,7 +107,7 @@ const OrphanageData: React.FC = () => {
       />
 
       <Label>WhatsApp</Label>
-      <Input />
+      <Input value={whatsapp} onChangeText={setWhatsapp} />
 
       <Label>Fotos</Label>
 
