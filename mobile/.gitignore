@@ -1,5 +1,6 @@
 # Expo
 node_modules
 .expo
+.env.json
 __generated__
 web-build
