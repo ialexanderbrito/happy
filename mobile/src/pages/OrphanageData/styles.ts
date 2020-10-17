@@ -49,6 +49,18 @@ export const ImagesInput = styled.TouchableOpacity`
   margin-bottom: 32px;
 `;
 
+export const UploadedImagesContainer = styled.View`
+  flex-direction: row;
+`;
+
+export const UploadedImage = styled.Image`
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+  margin-right: 8px;
+`;
+
 export const SwitchContainer = styled.View`
   flex-direction: row;
   align-items: center;
@@ -68,7 +80,7 @@ export const NextButton = styled(RectButton)`
 `;
 
 export const NextButtonText = styled.Text`
-  font-family: 'Nunito_800ExtraBold'
+  font-family: 'Nunito_800ExtraBold';
   font-size: 16px;
   color: ${({ theme }) => theme.primary};
 `;
