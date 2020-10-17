@@ -49,7 +49,7 @@ export const Map = styled(MapView)`
   height: 150px;
 `;
 
-export const RoutesContainer = styled.View`
+export const RoutesContainer = styled.TouchableOpacity`
   padding: 16px;
   align-items: center;
   justify-content: center;
