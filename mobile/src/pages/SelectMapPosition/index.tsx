@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import { PROVIDER_GOOGLE, Marker, MapEvent } from 'react-native-maps';
 import { useTheme } from 'styled-components';
 
 import darkMap from '../../themes/darkMap.json';
@@ -13,8 +13,14 @@ const SelectMapPosition: React.FC = () => {
   const theme = useTheme();
   const { navigate } = useNavigation();
 
+  const [position, setPosition] = useState({ latitude: 0, longitude: 0 });
+
   function handleNextStep() {
-    navigate('OrphanageData');
+    navigate('OrphanageData', { position });
+  }
+
+  function handleSelectMapPosition(event: MapEvent) {
+    setPosition(event.nativeEvent.coordinate);
   }
 
   return (
@@ -28,16 +34,24 @@ const SelectMapPosition: React.FC = () => {
           latitudeDelta: 0.008,
           longitudeDelta: 0.008,
         }}
+        onPress={handleSelectMapPosition}
       >
-        <Marker
-          icon={mapMarker}
-          coordinate={{ latitude: -22.767972, longitude: -43.3349147 }}
-        />
+        {position.latitude !== 0 && (
+          <Marker
+            icon={mapMarker}
+            coordinate={{
+              latitude: position.latitude,
+              longitude: position.longitude,
+            }}
+          />
+        )}
       </Map>
 
-      <NextButton onPress={handleNextStep}>
-        <NextButtonText>Próximo</NextButtonText>
-      </NextButton>
+      {position.latitude !== 0 && (
+        <NextButton onPress={handleNextStep}>
+          <NextButtonText>Próximo</NextButtonText>
+        </NextButton>
+      )}
     </Container>
   );
 };
