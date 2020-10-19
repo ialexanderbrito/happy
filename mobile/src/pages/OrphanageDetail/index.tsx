@@ -5,6 +5,8 @@ import { Feather, FontAwesome } from '@expo/vector-icons';
 import { useTheme } from 'styled-components';
 import { useRoute } from '@react-navigation/native';
 
+import Shimmer from '../../components/Shimmer';
+
 import darkMap from '../../themes/darkMap.json';
 
 import mapMarker from '../../assets/images/map-marker.png';
@@ -46,8 +48,8 @@ interface Orphanage {
   longitude: number;
   about: string;
   instructions: string;
-  opening_hours: string;
   whatsapp: string;
+  opening_hours: string;
   open_on_weekends: boolean;
   images: Array<{
     id: number;
@@ -59,18 +61,29 @@ const OrphanageDetail: React.FC = () => {
   const theme = useTheme();
   const route = useRoute();
 
+  const [isLoading, setIsLoading] = useState(true);
   const [orphanage, setOrphanage] = useState<Orphanage>();
 
   const params = route.params as OrphanageDetailRouteParams;
 
   useEffect(() => {
-    api.get(`orphanages/${params.id}`).then((response) => {
-      setOrphanage(response.data);
-    });
+    async function loadOrphanage() {
+      const { data } = await api.get(`orphanages/${params.id}`);
+      setOrphanage(data);
+    }
+    loadOrphanage();
   }, [params.id]);
 
-  if (!orphanage) {
-    return <Container />;
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 2000);
+
+  if (!orphanage || isLoading) {
+    return (
+      <Container>
+        <Shimmer />
+      </Container>
+    );
   }
 
   function handleOpenGoogleMapsRoute() {
