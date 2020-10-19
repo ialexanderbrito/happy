@@ -28,9 +28,9 @@
         "googleMaps": {
           "apiKey": "AIzaSyD34gxremar_jo9kDbMR093xOyrchy9NoM"
         }
-      },
-      "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
-      "githubUrl": "https://github.com/ialexanderbrito/happy"
-    }
+      }
+    },
+    "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
+    "githubUrl": "https://github.com/ialexanderbrito/happy"
   }
 }
