@@ -15,6 +15,9 @@
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-blueviolet?style=flat-square"></a>
     <img alt="License" src="https://img.shields.io/badge/license-MIT-blueviolet?style=flat-square">
 </p>
+<p align="center">
+  <a href="https://insomnia.rest/run/?label=API-Happy&uri=https://raw.githubusercontent.com/ialexanderbrito/happy/master/.github/Insomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+</p>
 
 <br>
 
@@ -41,6 +44,13 @@ Extras:
   - [ESLint](https://eslint.org/)
   - [Prettier](https://prettier.io/)
 
+### 💻 Demo Web
+
+[Visite o site](https://happy-oficial.netlify.app/)
+
+### 📱 App
+
+[Em breve](#)
 
 ### 💻 Projeto
 
