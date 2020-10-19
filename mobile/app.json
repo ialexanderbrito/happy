@@ -15,21 +15,22 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+    "userInterfaceStyle": "automatic",
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "com.ialexanderbrito.happy",
       "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "com.ialexanderbrito.happy",
+      "versionCode": 1,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyD34gxremar_jo9kDbMR093xOyrchy9NoM"
-        },
-      "package": "com.ialexanderbrito.happy",
-      "versionCode": 1
-    },
-    "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
-    "githubUrl": "https://github.com/ialexanderbrito/happy"
+        }
+      },
+      "description": "\nVisite um orfanato e deixe o dia de uma criança feliz.",
+      "githubUrl": "https://github.com/ialexanderbrito/happy"
     }
   }
 }
