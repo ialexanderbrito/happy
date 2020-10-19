@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native';
 import { useFonts } from 'expo-font';
 import { AppLoading } from 'expo';
 import {
@@ -9,6 +10,8 @@ import {
 import { AppearanceProvider } from 'react-native-appearance';
 
 import MainApplication from './src';
+
+LogBox.ignoreLogs(['Expected style']);
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
