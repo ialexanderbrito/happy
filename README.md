@@ -44,6 +44,12 @@ Extras:
   - [ESLint](https://eslint.org/)
   - [Prettier](https://prettier.io/)
 
+### 📱 Screen
+
+<h4 align="center">
+<img src=".github/screen.gif" width="300px" />
+</h4>
+
 ### 💻 Demo Web
 
 [Visite o site](https://happy-oficial.netlify.app/)
